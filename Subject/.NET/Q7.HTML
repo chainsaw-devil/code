@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap.min.css">
+</head>
+<body class="m-0 p-0" data-new-gr-c-s-check-loaded="14.1105.0" data-gr-ext-installed="">
+
+    <div class="container container-smooth">
+        <div class="row no-gutters">
+            
+<div class="col-12">
+    <div class="row no-gutters">
+        <div class="col-12 long-words">
+            
+
+            <div class="entry-text my-2 px-2 px-sm-4" style="min-height: 15rem; padding-top:0.1px; padding-bottom:0.1px">
+                <article>
+                    <div><div class="codeblock">
+<div class="clipboard" onclick="copyToClipboard()">
+<div class="clippy" tabindex="0" value="class Car
+    {
+        int price, launchyear;
+        string name, modelname;
+        public Car() { }
+        public void setData(int price,int launchyear,string name,string modelname)
+        {
+            this.price = price;
+            this.launchyear = launchyear;
+            this.name = name;
+            this.modelname = modelname;
+        }
+        public string getData()
+        {
+            return &quot;Name:- &quot; + name + &quot;  ModelName:- &quot; + modelname + &quot;  Price:- &quot;+price+&quot;  Launch Year:- &quot;+launchyear;
+        }
+    }
+
+public partial class Form1 : Form
+    {
+        Label namelbl, pricelbl, modlbl, yearlbl,displaylbl;
+        TextBox nametxt, pricetxt, modtxt, yeartxt;
+        Car c;
+        ArrayList al = new ArrayList();
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            namelbl = new Label();
+            namelbl.Text = &quot;Name:- &quot;;
+            namelbl.Top = 20;
+            namelbl.Left = 20;
+            Controls.Add(namelbl);
+            nametxt = new TextBox();
+            nametxt.Top = 20;
+            nametxt.Name = &quot;nametext&quot;;
+            nametxt.Left = 130;
+            Controls.Add(nametxt);
+
+
+            pricelbl = new Label();
+            pricelbl.Text = &quot;Price:- &quot;;
+            pricelbl.Top = 20*3;
+            pricelbl.Left = 20;
+            Controls.Add(pricelbl);
+             pricetxt = new TextBox();
+            pricetxt.Top = 20 * 3;
+            pricetxt.Name = &quot;pricetext&quot;;
+            pricetxt.Left = 130;
+            Controls.Add(pricetxt);
+
+            modlbl = new Label();
+            modlbl.Text = &quot;Model:- &quot;;
+            modlbl.Top = 20*5;
+            modlbl.Left = 20;
+            Controls.Add(modlbl);
+             modtxt = new TextBox();
+            modtxt.Top = 20*5;
+            modtxt.Name = &quot;modtext&quot;;
+            modtxt.Left = 130;
+            Controls.Add(modtxt);
+
+
+            yearlbl = new Label();
+            yearlbl.Text = &quot;Year:- &quot;;
+            yearlbl.Top = 20*7;
+            yearlbl.Left = 20;
+            Controls.Add(yearlbl);
+             yeartxt = new TextBox();
+            yeartxt.Top = 20*7;
+            yeartxt.Name = &quot;yeartext&quot;;
+            yeartxt.Left = 130;
+            Controls.Add(yeartxt);
+
+
+            Button insbtn = new Button();
+            insbtn.Text = &quot;Add&quot;;
+            insbtn.Top = 50;
+            insbtn.Left = 130 * 2;
+            insbtn.Height = 100;
+            Controls.Add(insbtn);
+
+            Button disbtn = new Button();
+            disbtn.Text = &quot;Display&quot;;
+            disbtn.Top = 50;
+            disbtn.Left = (130 * 2)+100;
+            disbtn.Font = new Font(&quot;Display&quot;,12);
+            disbtn.Height = 100;
+            Controls.Add(disbtn);
+
+
+            displaylbl = new Label();
+            displaylbl.Text = &quot;&quot;;
+            displaylbl.Name = &quot;distext&quot;;
+            displaylbl.Width = 1000;
+            displaylbl.BackColor = System.Drawing.Color.Gray;
+            displaylbl.Top = 20 * 9;
+            displaylbl.Left = 20;
+            displaylbl.Height = 1000;
+            Controls.Add(displaylbl);
+
+            EventHandler addeh = new EventHandler(addinto);
+            insbtn.Click += addeh;
+
+            EventHandler displayeh = new EventHandler(displayfrom);
+            disbtn.Click += displayeh;
+        }
+        private void addinto(object sender, EventArgs e)
+        {
+            try
+            {
+                c = new Car();
+                c.setData(Convert.ToInt32( pricetxt.Text),Convert.ToInt32( yeartxt.Text),nametxt.Text,modtxt.Text);
+                al.Add(c);
+            }
+            catch { MessageBox.Show(&quot;Please enter data properly&quot;); }
+        }
+        private void displayfrom(object sender, EventArgs e)
+        {
+            displaylbl.Text = &quot;&quot;;
+            foreach (Car obj in al)
+            {
+
+                displaylbl.Text = displaylbl.Text + obj.getData()+&quot;\n&quot;;
+            }
+        }
+    }">
+<div class="clippy-icon">⎗</div>
+<div class="check-icon d-none cb-tooltip">✓<span class="cb-tooltiptext"></span></div>
+</div>
+</div>
+<table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"><a href="#L-1-1">  1</a></span>
+<span class="normal"><a href="#L-1-2">  2</a></span>
+<span class="normal"><a href="#L-1-3">  3</a></span>
+<span class="normal"><a href="#L-1-4">  4</a></span>
+<span class="normal"><a href="#L-1-5">  5</a></span>
+<span class="normal"><a href="#L-1-6">  6</a></span>
+<span class="normal"><a href="#L-1-7">  7</a></span>
+<span class="normal"><a href="#L-1-8">  8</a></span>
+<span class="normal"><a href="#L-1-9">  9</a></span>
+<span class="normal"><a href="#L-1-10"> 10</a></span>
+<span class="normal"><a href="#L-1-11"> 11</a></span>
+<span class="normal"><a href="#L-1-12"> 12</a></span>
+<span class="normal"><a href="#L-1-13"> 13</a></span>
+<span class="normal"><a href="#L-1-14"> 14</a></span>
+<span class="normal"><a href="#L-1-15"> 15</a></span>
+<span class="normal"><a href="#L-1-16"> 16</a></span>
+<span class="normal"><a href="#L-1-17"> 17</a></span>
+<span class="normal"><a href="#L-1-18"> 18</a></span>
+<span class="normal"><a href="#L-1-19"> 19</a></span>
+<span class="normal"><a href="#L-1-20"> 20</a></span>
+<span class="normal"><a href="#L-1-21"> 21</a></span>
+<span class="normal"><a href="#L-1-22"> 22</a></span>
+<span class="normal"><a href="#L-1-23"> 23</a></span>
+<span class="normal"><a href="#L-1-24"> 24</a></span>
+<span class="normal"><a href="#L-1-25"> 25</a></span>
+<span class="normal"><a href="#L-1-26"> 26</a></span>
+<span class="normal"><a href="#L-1-27"> 27</a></span>
+<span class="normal"><a href="#L-1-28"> 28</a></span>
+<span class="normal"><a href="#L-1-29"> 29</a></span>
+<span class="normal"><a href="#L-1-30"> 30</a></span>
+<span class="normal"><a href="#L-1-31"> 31</a></span>
+<span class="normal"><a href="#L-1-32"> 32</a></span>
+<span class="normal"><a href="#L-1-33"> 33</a></span>
+<span class="normal"><a href="#L-1-34"> 34</a></span>
+<span class="normal"><a href="#L-1-35"> 35</a></span>
+<span class="normal"><a href="#L-1-36"> 36</a></span>
+<span class="normal"><a href="#L-1-37"> 37</a></span>
+<span class="normal"><a href="#L-1-38"> 38</a></span>
+<span class="normal"><a href="#L-1-39"> 39</a></span>
+<span class="normal"><a href="#L-1-40"> 40</a></span>
+<span class="normal"><a href="#L-1-41"> 41</a></span>
+<span class="normal"><a href="#L-1-42"> 42</a></span>
+<span class="normal"><a href="#L-1-43"> 43</a></span>
+<span class="normal"><a href="#L-1-44"> 44</a></span>
+<span class="normal"><a href="#L-1-45"> 45</a></span>
+<span class="normal"><a href="#L-1-46"> 46</a></span>
+<span class="normal"><a href="#L-1-47"> 47</a></span>
+<span class="normal"><a href="#L-1-48"> 48</a></span>
+<span class="normal"><a href="#L-1-49"> 49</a></span>
+<span class="normal"><a href="#L-1-50"> 50</a></span>
+<span class="normal"><a href="#L-1-51"> 51</a></span>
+<span class="normal"><a href="#L-1-52"> 52</a></span>
+<span class="normal"><a href="#L-1-53"> 53</a></span>
+<span class="normal"><a href="#L-1-54"> 54</a></span>
+<span class="normal"><a href="#L-1-55"> 55</a></span>
+<span class="normal"><a href="#L-1-56"> 56</a></span>
+<span class="normal"><a href="#L-1-57"> 57</a></span>
+<span class="normal"><a href="#L-1-58"> 58</a></span>
+<span class="normal"><a href="#L-1-59"> 59</a></span>
+<span class="normal"><a href="#L-1-60"> 60</a></span>
+<span class="normal"><a href="#L-1-61"> 61</a></span>
+<span class="normal"><a href="#L-1-62"> 62</a></span>
+<span class="normal"><a href="#L-1-63"> 63</a></span>
+<span class="normal"><a href="#L-1-64"> 64</a></span>
+<span class="normal"><a href="#L-1-65"> 65</a></span>
+<span class="normal"><a href="#L-1-66"> 66</a></span>
+<span class="normal"><a href="#L-1-67"> 67</a></span>
+<span class="normal"><a href="#L-1-68"> 68</a></span>
+<span class="normal"><a href="#L-1-69"> 69</a></span>
+<span class="normal"><a href="#L-1-70"> 70</a></span>
+<span class="normal"><a href="#L-1-71"> 71</a></span>
+<span class="normal"><a href="#L-1-72"> 72</a></span>
+<span class="normal"><a href="#L-1-73"> 73</a></span>
+<span class="normal"><a href="#L-1-74"> 74</a></span>
+<span class="normal"><a href="#L-1-75"> 75</a></span>
+<span class="normal"><a href="#L-1-76"> 76</a></span>
+<span class="normal"><a href="#L-1-77"> 77</a></span>
+<span class="normal"><a href="#L-1-78"> 78</a></span>
+<span class="normal"><a href="#L-1-79"> 79</a></span>
+<span class="normal"><a href="#L-1-80"> 80</a></span>
+<span class="normal"><a href="#L-1-81"> 81</a></span>
+<span class="normal"><a href="#L-1-82"> 82</a></span>
+<span class="normal"><a href="#L-1-83"> 83</a></span>
+<span class="normal"><a href="#L-1-84"> 84</a></span>
+<span class="normal"><a href="#L-1-85"> 85</a></span>
+<span class="normal"><a href="#L-1-86"> 86</a></span>
+<span class="normal"><a href="#L-1-87"> 87</a></span>
+<span class="normal"><a href="#L-1-88"> 88</a></span>
+<span class="normal"><a href="#L-1-89"> 89</a></span>
+<span class="normal"><a href="#L-1-90"> 90</a></span>
+<span class="normal"><a href="#L-1-91"> 91</a></span>
+<span class="normal"><a href="#L-1-92"> 92</a></span>
+<span class="normal"><a href="#L-1-93"> 93</a></span>
+<span class="normal"><a href="#L-1-94"> 94</a></span>
+<span class="normal"><a href="#L-1-95"> 95</a></span>
+<span class="normal"><a href="#L-1-96"> 96</a></span>
+<span class="normal"><a href="#L-1-97"> 97</a></span>
+<span class="normal"><a href="#L-1-98"> 98</a></span>
+<span class="normal"><a href="#L-1-99"> 99</a></span>
+<span class="normal"><a href="#L-1-100">100</a></span>
+<span class="normal"><a href="#L-1-101">101</a></span>
+<span class="normal"><a href="#L-1-102">102</a></span>
+<span class="normal"><a href="#L-1-103">103</a></span>
+<span class="normal"><a href="#L-1-104">104</a></span>
+<span class="normal"><a href="#L-1-105">105</a></span>
+<span class="normal"><a href="#L-1-106">106</a></span>
+<span class="normal"><a href="#L-1-107">107</a></span>
+<span class="normal"><a href="#L-1-108">108</a></span>
+<span class="normal"><a href="#L-1-109">109</a></span>
+<span class="normal"><a href="#L-1-110">110</a></span>
+<span class="normal"><a href="#L-1-111">111</a></span>
+<span class="normal"><a href="#L-1-112">112</a></span>
+<span class="normal"><a href="#L-1-113">113</a></span>
+<span class="normal"><a href="#L-1-114">114</a></span>
+<span class="normal"><a href="#L-1-115">115</a></span>
+<span class="normal"><a href="#L-1-116">116</a></span>
+<span class="normal"><a href="#L-1-117">117</a></span>
+<span class="normal"><a href="#L-1-118">118</a></span>
+<span class="normal"><a href="#L-1-119">119</a></span>
+<span class="normal"><a href="#L-1-120">120</a></span>
+<span class="normal"><a href="#L-1-121">121</a></span>
+<span class="normal"><a href="#L-1-122">122</a></span>
+<span class="normal"><a href="#L-1-123">123</a></span>
+<span class="normal"><a href="#L-1-124">124</a></span>
+<span class="normal"><a href="#L-1-125">125</a></span>
+<span class="normal"><a href="#L-1-126">126</a></span>
+<span class="normal"><a href="#L-1-127">127</a></span>
+<span class="normal"><a href="#L-1-128">128</a></span>
+<span class="normal"><a href="#L-1-129">129</a></span>
+<span class="normal"><a href="#L-1-130">130</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span id="L-1-1"><a id="L-1-1" name="L-1-1"></a><span class="s s-Atom">class</span> <span class="nv">Car</span>
+</span><span id="L-1-2"><a id="L-1-2" name="L-1-2"></a>    <span class="p">{</span>
+</span><span id="L-1-3"><a id="L-1-3" name="L-1-3"></a>        <span class="s s-Atom">int</span> <span class="s s-Atom">price</span><span class="p">,</span> <span class="s s-Atom">launchyear</span><span class="p">;</span>
+</span><span id="L-1-4"><a id="L-1-4" name="L-1-4"></a>        <span class="s s-Atom">string</span> <span class="s s-Atom">name</span><span class="p">,</span> <span class="s s-Atom">modelname</span><span class="p">;</span>
+</span><span id="L-1-5"><a id="L-1-5" name="L-1-5"></a>        <span class="s s-Atom">public</span> <span class="nv">Car</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+</span><span id="L-1-6"><a id="L-1-6" name="L-1-6"></a>        <span class="s s-Atom">public</span> <span class="s s-Atom">void</span> <span class="nf">setData</span><span class="p">(</span><span class="s s-Atom">int</span> <span class="s s-Atom">price</span><span class="p">,</span><span class="s s-Atom">int</span> <span class="s s-Atom">launchyear</span><span class="p">,</span><span class="s s-Atom">string</span> <span class="s s-Atom">name</span><span class="p">,</span><span class="s s-Atom">string</span> <span class="s s-Atom">modelname</span><span class="p">)</span>
+</span><span id="L-1-7"><a id="L-1-7" name="L-1-7"></a>        <span class="p">{</span>
+</span><span id="L-1-8"><a id="L-1-8" name="L-1-8"></a>            <span class="s s-Atom">this</span><span class="p">.</span><span class="s s-Atom">price</span> <span class="o">=</span> <span class="s s-Atom">price</span><span class="p">;</span>
+</span><span id="L-1-9"><a id="L-1-9" name="L-1-9"></a>            <span class="s s-Atom">this</span><span class="p">.</span><span class="s s-Atom">launchyear</span> <span class="o">=</span> <span class="s s-Atom">launchyear</span><span class="p">;</span>
+</span><span id="L-1-10"><a id="L-1-10" name="L-1-10"></a>            <span class="s s-Atom">this</span><span class="p">.</span><span class="s s-Atom">name</span> <span class="o">=</span> <span class="s s-Atom">name</span><span class="p">;</span>
+</span><span id="L-1-11"><a id="L-1-11" name="L-1-11"></a>            <span class="s s-Atom">this</span><span class="p">.</span><span class="s s-Atom">modelname</span> <span class="o">=</span> <span class="s s-Atom">modelname</span><span class="p">;</span>
+</span><span id="L-1-12"><a id="L-1-12" name="L-1-12"></a>        <span class="p">}</span>
+</span><span id="L-1-13"><a id="L-1-13" name="L-1-13"></a>        <span class="s s-Atom">public</span> <span class="s s-Atom">string</span> <span class="nf">getData</span><span class="p">()</span>
+</span><span id="L-1-14"><a id="L-1-14" name="L-1-14"></a>        <span class="p">{</span>
+</span><span id="L-1-15"><a id="L-1-15" name="L-1-15"></a>            <span class="s s-Atom">return</span> <span class="s2">"Name:- "</span> <span class="o">+</span> <span class="s s-Atom">name</span> <span class="o">+</span> <span class="s2">"  ModelName:- "</span> <span class="o">+</span> <span class="s s-Atom">modelname</span> <span class="o">+</span> <span class="s2">"  Price:- "</span><span class="o">+</span><span class="s s-Atom">price+</span><span class="s2">"  Launch Year:- "</span><span class="o">+</span><span class="s s-Atom">launchyear</span><span class="p">;</span>
+</span><span id="L-1-16"><a id="L-1-16" name="L-1-16"></a>        <span class="p">}</span>
+</span><span id="L-1-17"><a id="L-1-17" name="L-1-17"></a>    <span class="p">}</span>
+</span><span id="L-1-18"><a id="L-1-18" name="L-1-18"></a>
+</span><span id="L-1-19"><a id="L-1-19" name="L-1-19"></a><span class="s s-Atom">public</span> <span class="s s-Atom">partial</span> <span class="s s-Atom">class</span> <span class="nv">Form1</span> <span class="s s-Atom">:</span> <span class="nv">Form</span>
+</span><span id="L-1-20"><a id="L-1-20" name="L-1-20"></a>    <span class="p">{</span>
+</span><span id="L-1-21"><a id="L-1-21" name="L-1-21"></a>        <span class="nv">Label</span> <span class="s s-Atom">namelbl</span><span class="p">,</span> <span class="s s-Atom">pricelbl</span><span class="p">,</span> <span class="s s-Atom">modlbl</span><span class="p">,</span> <span class="s s-Atom">yearlbl</span><span class="p">,</span><span class="s s-Atom">displaylbl</span><span class="p">;</span>
+</span><span id="L-1-22"><a id="L-1-22" name="L-1-22"></a>        <span class="nv">TextBox</span> <span class="s s-Atom">nametxt</span><span class="p">,</span> <span class="s s-Atom">pricetxt</span><span class="p">,</span> <span class="s s-Atom">modtxt</span><span class="p">,</span> <span class="s s-Atom">yeartxt</span><span class="p">;</span>
+</span><span id="L-1-23"><a id="L-1-23" name="L-1-23"></a>        <span class="nv">Car</span> <span class="s s-Atom">c</span><span class="p">;</span>
+</span><span id="L-1-24"><a id="L-1-24" name="L-1-24"></a>        <span class="nv">ArrayList</span> <span class="s s-Atom">al</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">ArrayList</span><span class="p">();</span>
+</span><span id="L-1-25"><a id="L-1-25" name="L-1-25"></a>        <span class="s s-Atom">public</span> <span class="nv">Form1</span><span class="p">()</span>
+</span><span id="L-1-26"><a id="L-1-26" name="L-1-26"></a>        <span class="p">{</span>
+</span><span id="L-1-27"><a id="L-1-27" name="L-1-27"></a>            <span class="nv">InitializeComponent</span><span class="p">();</span>
+</span><span id="L-1-28"><a id="L-1-28" name="L-1-28"></a>        <span class="p">}</span>
+</span><span id="L-1-29"><a id="L-1-29" name="L-1-29"></a>
+</span><span id="L-1-30"><a id="L-1-30" name="L-1-30"></a>        <span class="s s-Atom">private</span> <span class="s s-Atom">void</span> <span class="nv">Form1_Load</span><span class="p">(</span><span class="s s-Atom">object</span> <span class="s s-Atom">sender</span><span class="p">,</span> <span class="nv">EventArgs</span> <span class="s s-Atom">e</span><span class="p">)</span>
+</span><span id="L-1-31"><a id="L-1-31" name="L-1-31"></a>        <span class="p">{</span>
+</span><span id="L-1-32"><a id="L-1-32" name="L-1-32"></a>            <span class="s s-Atom">namelbl</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">Label</span><span class="p">();</span>
+</span><span id="L-1-33"><a id="L-1-33" name="L-1-33"></a>            <span class="s s-Atom">namelbl</span><span class="p">.</span><span class="nv">Text</span> <span class="o">=</span> <span class="s2">"Name:- "</span><span class="p">;</span>
+</span><span id="L-1-34"><a id="L-1-34" name="L-1-34"></a>            <span class="s s-Atom">namelbl</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</span><span id="L-1-35"><a id="L-1-35" name="L-1-35"></a>            <span class="s s-Atom">namelbl</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</span><span id="L-1-36"><a id="L-1-36" name="L-1-36"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">namelbl</span><span class="p">);</span>
+</span><span id="L-1-37"><a id="L-1-37" name="L-1-37"></a>            <span class="s s-Atom">nametxt</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">TextBox</span><span class="p">();</span>
+</span><span id="L-1-38"><a id="L-1-38" name="L-1-38"></a>            <span class="s s-Atom">nametxt</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</span><span id="L-1-39"><a id="L-1-39" name="L-1-39"></a>            <span class="s s-Atom">nametxt</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s2">"nametext"</span><span class="p">;</span>
+</span><span id="L-1-40"><a id="L-1-40" name="L-1-40"></a>            <span class="s s-Atom">nametxt</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="mi">130</span><span class="p">;</span>
+</span><span id="L-1-41"><a id="L-1-41" name="L-1-41"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">nametxt</span><span class="p">);</span>
+</span><span id="L-1-42"><a id="L-1-42" name="L-1-42"></a>
+</span><span id="L-1-43"><a id="L-1-43" name="L-1-43"></a>
+</span><span id="L-1-44"><a id="L-1-44" name="L-1-44"></a>            <span class="s s-Atom">pricelbl</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">Label</span><span class="p">();</span>
+</span><span id="L-1-45"><a id="L-1-45" name="L-1-45"></a>            <span class="s s-Atom">pricelbl</span><span class="p">.</span><span class="nv">Text</span> <span class="o">=</span> <span class="s2">"Price:- "</span><span class="p">;</span>
+</span><span id="L-1-46"><a id="L-1-46" name="L-1-46"></a>            <span class="s s-Atom">pricelbl</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="mi">3</span><span class="p">;</span>
+</span><span id="L-1-47"><a id="L-1-47" name="L-1-47"></a>            <span class="s s-Atom">pricelbl</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</span><span id="L-1-48"><a id="L-1-48" name="L-1-48"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">pricelbl</span><span class="p">);</span>
+</span><span id="L-1-49"><a id="L-1-49" name="L-1-49"></a>             <span class="s s-Atom">pricetxt</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">TextBox</span><span class="p">();</span>
+</span><span id="L-1-50"><a id="L-1-50" name="L-1-50"></a>            <span class="s s-Atom">pricetxt</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
+</span><span id="L-1-51"><a id="L-1-51" name="L-1-51"></a>            <span class="s s-Atom">pricetxt</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s2">"pricetext"</span><span class="p">;</span>
+</span><span id="L-1-52"><a id="L-1-52" name="L-1-52"></a>            <span class="s s-Atom">pricetxt</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="mi">130</span><span class="p">;</span>
+</span><span id="L-1-53"><a id="L-1-53" name="L-1-53"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">pricetxt</span><span class="p">);</span>
+</span><span id="L-1-54"><a id="L-1-54" name="L-1-54"></a>
+</span><span id="L-1-55"><a id="L-1-55" name="L-1-55"></a>            <span class="s s-Atom">modlbl</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">Label</span><span class="p">();</span>
+</span><span id="L-1-56"><a id="L-1-56" name="L-1-56"></a>            <span class="s s-Atom">modlbl</span><span class="p">.</span><span class="nv">Text</span> <span class="o">=</span> <span class="s2">"Model:- "</span><span class="p">;</span>
+</span><span id="L-1-57"><a id="L-1-57" name="L-1-57"></a>            <span class="s s-Atom">modlbl</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="mi">5</span><span class="p">;</span>
+</span><span id="L-1-58"><a id="L-1-58" name="L-1-58"></a>            <span class="s s-Atom">modlbl</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</span><span id="L-1-59"><a id="L-1-59" name="L-1-59"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">modlbl</span><span class="p">);</span>
+</span><span id="L-1-60"><a id="L-1-60" name="L-1-60"></a>             <span class="s s-Atom">modtxt</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">TextBox</span><span class="p">();</span>
+</span><span id="L-1-61"><a id="L-1-61" name="L-1-61"></a>            <span class="s s-Atom">modtxt</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="mi">5</span><span class="p">;</span>
+</span><span id="L-1-62"><a id="L-1-62" name="L-1-62"></a>            <span class="s s-Atom">modtxt</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s2">"modtext"</span><span class="p">;</span>
+</span><span id="L-1-63"><a id="L-1-63" name="L-1-63"></a>            <span class="s s-Atom">modtxt</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="mi">130</span><span class="p">;</span>
+</span><span id="L-1-64"><a id="L-1-64" name="L-1-64"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">modtxt</span><span class="p">);</span>
+</span><span id="L-1-65"><a id="L-1-65" name="L-1-65"></a>
+</span><span id="L-1-66"><a id="L-1-66" name="L-1-66"></a>
+</span><span id="L-1-67"><a id="L-1-67" name="L-1-67"></a>            <span class="s s-Atom">yearlbl</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">Label</span><span class="p">();</span>
+</span><span id="L-1-68"><a id="L-1-68" name="L-1-68"></a>            <span class="s s-Atom">yearlbl</span><span class="p">.</span><span class="nv">Text</span> <span class="o">=</span> <span class="s2">"Year:- "</span><span class="p">;</span>
+</span><span id="L-1-69"><a id="L-1-69" name="L-1-69"></a>            <span class="s s-Atom">yearlbl</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="mi">7</span><span class="p">;</span>
+</span><span id="L-1-70"><a id="L-1-70" name="L-1-70"></a>            <span class="s s-Atom">yearlbl</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</span><span id="L-1-71"><a id="L-1-71" name="L-1-71"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">yearlbl</span><span class="p">);</span>
+</span><span id="L-1-72"><a id="L-1-72" name="L-1-72"></a>             <span class="s s-Atom">yeartxt</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">TextBox</span><span class="p">();</span>
+</span><span id="L-1-73"><a id="L-1-73" name="L-1-73"></a>            <span class="s s-Atom">yeartxt</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="mi">7</span><span class="p">;</span>
+</span><span id="L-1-74"><a id="L-1-74" name="L-1-74"></a>            <span class="s s-Atom">yeartxt</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s2">"yeartext"</span><span class="p">;</span>
+</span><span id="L-1-75"><a id="L-1-75" name="L-1-75"></a>            <span class="s s-Atom">yeartxt</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="mi">130</span><span class="p">;</span>
+</span><span id="L-1-76"><a id="L-1-76" name="L-1-76"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">yeartxt</span><span class="p">);</span>
+</span><span id="L-1-77"><a id="L-1-77" name="L-1-77"></a>
+</span><span id="L-1-78"><a id="L-1-78" name="L-1-78"></a>
+</span><span id="L-1-79"><a id="L-1-79" name="L-1-79"></a>            <span class="nv">Button</span> <span class="s s-Atom">insbtn</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">Button</span><span class="p">();</span>
+</span><span id="L-1-80"><a id="L-1-80" name="L-1-80"></a>            <span class="s s-Atom">insbtn</span><span class="p">.</span><span class="nv">Text</span> <span class="o">=</span> <span class="s2">"Add"</span><span class="p">;</span>
+</span><span id="L-1-81"><a id="L-1-81" name="L-1-81"></a>            <span class="s s-Atom">insbtn</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+</span><span id="L-1-82"><a id="L-1-82" name="L-1-82"></a>            <span class="s s-Atom">insbtn</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="mi">130</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</span><span id="L-1-83"><a id="L-1-83" name="L-1-83"></a>            <span class="s s-Atom">insbtn</span><span class="p">.</span><span class="nv">Height</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</span><span id="L-1-84"><a id="L-1-84" name="L-1-84"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">insbtn</span><span class="p">);</span>
+</span><span id="L-1-85"><a id="L-1-85" name="L-1-85"></a>
+</span><span id="L-1-86"><a id="L-1-86" name="L-1-86"></a>            <span class="nv">Button</span> <span class="s s-Atom">disbtn</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">Button</span><span class="p">();</span>
+</span><span id="L-1-87"><a id="L-1-87" name="L-1-87"></a>            <span class="s s-Atom">disbtn</span><span class="p">.</span><span class="nv">Text</span> <span class="o">=</span> <span class="s2">"Display"</span><span class="p">;</span>
+</span><span id="L-1-88"><a id="L-1-88" name="L-1-88"></a>            <span class="s s-Atom">disbtn</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+</span><span id="L-1-89"><a id="L-1-89" name="L-1-89"></a>            <span class="s s-Atom">disbtn</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="p">(</span><span class="mi">130</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">100</span><span class="p">;</span>
+</span><span id="L-1-90"><a id="L-1-90" name="L-1-90"></a>            <span class="s s-Atom">disbtn</span><span class="p">.</span><span class="nv">Font</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">Font</span><span class="p">(</span><span class="s2">"Display"</span><span class="p">,</span><span class="mi">12</span><span class="p">);</span>
+</span><span id="L-1-91"><a id="L-1-91" name="L-1-91"></a>            <span class="s s-Atom">disbtn</span><span class="p">.</span><span class="nv">Height</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</span><span id="L-1-92"><a id="L-1-92" name="L-1-92"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">disbtn</span><span class="p">);</span>
+</span><span id="L-1-93"><a id="L-1-93" name="L-1-93"></a>
+</span><span id="L-1-94"><a id="L-1-94" name="L-1-94"></a>
+</span><span id="L-1-95"><a id="L-1-95" name="L-1-95"></a>            <span class="s s-Atom">displaylbl</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">Label</span><span class="p">();</span>
+</span><span id="L-1-96"><a id="L-1-96" name="L-1-96"></a>            <span class="s s-Atom">displaylbl</span><span class="p">.</span><span class="nv">Text</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+</span><span id="L-1-97"><a id="L-1-97" name="L-1-97"></a>            <span class="s s-Atom">displaylbl</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s2">"distext"</span><span class="p">;</span>
+</span><span id="L-1-98"><a id="L-1-98" name="L-1-98"></a>            <span class="s s-Atom">displaylbl</span><span class="p">.</span><span class="nv">Width</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+</span><span id="L-1-99"><a id="L-1-99" name="L-1-99"></a>            <span class="s s-Atom">displaylbl</span><span class="p">.</span><span class="nv">BackColor</span> <span class="o">=</span> <span class="nv">System</span><span class="p">.</span><span class="nv">Drawing</span><span class="p">.</span><span class="nv">Color</span><span class="p">.</span><span class="nv">Gray</span><span class="p">;</span>
+</span><span id="L-1-100"><a id="L-1-100" name="L-1-100"></a>            <span class="s s-Atom">displaylbl</span><span class="p">.</span><span class="nv">Top</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="mi">9</span><span class="p">;</span>
+</span><span id="L-1-101"><a id="L-1-101" name="L-1-101"></a>            <span class="s s-Atom">displaylbl</span><span class="p">.</span><span class="nv">Left</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</span><span id="L-1-102"><a id="L-1-102" name="L-1-102"></a>            <span class="s s-Atom">displaylbl</span><span class="p">.</span><span class="nv">Height</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+</span><span id="L-1-103"><a id="L-1-103" name="L-1-103"></a>            <span class="nv">Controls</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">displaylbl</span><span class="p">);</span>
+</span><span id="L-1-104"><a id="L-1-104" name="L-1-104"></a>
+</span><span id="L-1-105"><a id="L-1-105" name="L-1-105"></a>            <span class="nv">EventHandler</span> <span class="s s-Atom">addeh</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">EventHandler</span><span class="p">(</span><span class="s s-Atom">addinto</span><span class="p">);</span>
+</span><span id="L-1-106"><a id="L-1-106" name="L-1-106"></a>            <span class="s s-Atom">insbtn</span><span class="p">.</span><span class="nv">Click</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">addeh</span><span class="p">;</span>
+</span><span id="L-1-107"><a id="L-1-107" name="L-1-107"></a>
+</span><span id="L-1-108"><a id="L-1-108" name="L-1-108"></a>            <span class="nv">EventHandler</span> <span class="s s-Atom">displayeh</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">EventHandler</span><span class="p">(</span><span class="s s-Atom">displayfrom</span><span class="p">);</span>
+</span><span id="L-1-109"><a id="L-1-109" name="L-1-109"></a>            <span class="s s-Atom">disbtn</span><span class="p">.</span><span class="nv">Click</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">displayeh</span><span class="p">;</span>
+</span><span id="L-1-110"><a id="L-1-110" name="L-1-110"></a>        <span class="p">}</span>
+</span><span id="L-1-111"><a id="L-1-111" name="L-1-111"></a>        <span class="s s-Atom">private</span> <span class="s s-Atom">void</span> <span class="nf">addinto</span><span class="p">(</span><span class="s s-Atom">object</span> <span class="s s-Atom">sender</span><span class="p">,</span> <span class="nv">EventArgs</span> <span class="s s-Atom">e</span><span class="p">)</span>
+</span><span id="L-1-112"><a id="L-1-112" name="L-1-112"></a>        <span class="p">{</span>
+</span><span id="L-1-113"><a id="L-1-113" name="L-1-113"></a>            <span class="s s-Atom">try</span>
+</span><span id="L-1-114"><a id="L-1-114" name="L-1-114"></a>            <span class="p">{</span>
+</span><span id="L-1-115"><a id="L-1-115" name="L-1-115"></a>                <span class="s s-Atom">c</span> <span class="o">=</span> <span class="s s-Atom">new</span> <span class="nv">Car</span><span class="p">();</span>
+</span><span id="L-1-116"><a id="L-1-116" name="L-1-116"></a>                <span class="s s-Atom">c</span><span class="p">.</span><span class="nf">setData</span><span class="p">(</span><span class="nv">Convert</span><span class="p">.</span><span class="nv">ToInt32</span><span class="p">(</span> <span class="s s-Atom">pricetxt</span><span class="p">.</span><span class="nv">Text</span><span class="p">),</span><span class="nv">Convert</span><span class="p">.</span><span class="nv">ToInt32</span><span class="p">(</span> <span class="s s-Atom">yeartxt</span><span class="p">.</span><span class="nv">Text</span><span class="p">),</span><span class="s s-Atom">nametxt</span><span class="p">.</span><span class="nv">Text</span><span class="p">,</span><span class="s s-Atom">modtxt</span><span class="p">.</span><span class="nv">Text</span><span class="p">);</span>
+</span><span id="L-1-117"><a id="L-1-117" name="L-1-117"></a>                <span class="s s-Atom">al</span><span class="p">.</span><span class="nv">Add</span><span class="p">(</span><span class="s s-Atom">c</span><span class="p">);</span>
+</span><span id="L-1-118"><a id="L-1-118" name="L-1-118"></a>            <span class="p">}</span>
+</span><span id="L-1-119"><a id="L-1-119" name="L-1-119"></a>            <span class="s s-Atom">catch</span> <span class="p">{</span> <span class="nv">MessageBox</span><span class="p">.</span><span class="nv">Show</span><span class="p">(</span><span class="s2">"Please enter data properly"</span><span class="p">);</span> <span class="p">}</span>
+</span><span id="L-1-120"><a id="L-1-120" name="L-1-120"></a>        <span class="p">}</span>
+</span><span id="L-1-121"><a id="L-1-121" name="L-1-121"></a>        <span class="s s-Atom">private</span> <span class="s s-Atom">void</span> <span class="nf">displayfrom</span><span class="p">(</span><span class="s s-Atom">object</span> <span class="s s-Atom">sender</span><span class="p">,</span> <span class="nv">EventArgs</span> <span class="s s-Atom">e</span><span class="p">)</span>
+</span><span id="L-1-122"><a id="L-1-122" name="L-1-122"></a>        <span class="p">{</span>
+</span><span id="L-1-123"><a id="L-1-123" name="L-1-123"></a>            <span class="s s-Atom">displaylbl</span><span class="p">.</span><span class="nv">Text</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+</span><span id="L-1-124"><a id="L-1-124" name="L-1-124"></a>            <span class="nf">foreach</span> <span class="p">(</span><span class="nv">Car</span> <span class="s s-Atom">obj</span> <span class="s s-Atom">in</span> <span class="s s-Atom">al</span><span class="p">)</span>
+</span><span id="L-1-125"><a id="L-1-125" name="L-1-125"></a>            <span class="p">{</span>
+</span><span id="L-1-126"><a id="L-1-126" name="L-1-126"></a>
+</span><span id="L-1-127"><a id="L-1-127" name="L-1-127"></a>                <span class="s s-Atom">displaylbl</span><span class="p">.</span><span class="nv">Text</span> <span class="o">=</span> <span class="s s-Atom">displaylbl</span><span class="p">.</span><span class="nv">Text</span> <span class="o">+</span> <span class="s s-Atom">obj</span><span class="p">.</span><span class="nf">getData</span><span class="p">()</span><span class="s s-Atom">+</span><span class="s2">"\n"</span><span class="p">;</span>
+</span><span id="L-1-128"><a id="L-1-128" name="L-1-128"></a>            <span class="p">}</span>
+</span><span id="L-1-129"><a id="L-1-129" name="L-1-129"></a>        <span class="p">}</span>
+</span><span id="L-1-130"><a id="L-1-130" name="L-1-130"></a>    <span class="p">}</span>
+</span></pre></div>
+</td></tr></tbody></table>
+</div>
+</div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+   
+</div>
+
+            
+        </div>
+    </div>
+
+    <script src="../../js/jquery-3.5.1.min.dc5e7f18c8.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script>
+        function copyToClipboard() {
+            const snippet = document.querySelector('.clippy');
+            const code = snippet.getAttribute('value');
+            navigator.clipboard.writeText(code).then(() => {
+                const checkIcon = snippet.querySelector('.check-icon');
+                checkIcon.classList.remove('d-none');
+                setTimeout(() => {
+                    checkIcon.classList.add('d-none');
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+</html>
