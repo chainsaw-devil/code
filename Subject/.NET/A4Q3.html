@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap.min.css">
+</head>
+
+<body class="m-0 p-0" data-new-gr-c-s-check-loaded="14.1106.0" data-gr-ext-installed="">
+
+    <div class="container container-smooth">
+        <div class="row no-gutters">
+            
+<div class="col-12">
+    <div class="row no-gutters">
+        <div class="col-12 long-words">
+            
+
+            <div class="entry-text my-2 px-2 px-sm-4" style="min-height: 15rem; padding-top:0.1px; padding-bottom:0.1px">
+                <article>
+                    <div><p>sql<br>
+</p><div class="codeblock">
+<div class="clipboard">
+<div class="clippy" tabindex="0" value="CREATE TABLE Book (
+    bid int IDENTITY(1,1) PRIMARY KEY,
+    title varchar(50) NOT NULL,
+    subject varchar(50) NOT NULL,
+    author varchar(50) NOT NULL,
+    publisher varchar(50) NOT NULL,
+    price decimal(10,2) NOT NULL,
+    no_of_copies int NOT NULL
+)">
+<div class="clippy-icon">⎗</div>
+<div class="check-icon d-none cb-tooltip">✓<span class="cb-tooltiptext"></span></div>
+</div>
+</div>
+<table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"><a href="#L-1-1">1</a></span>
+<span class="normal"><a href="#L-1-2">2</a></span>
+<span class="normal"><a href="#L-1-3">3</a></span>
+<span class="normal"><a href="#L-1-4">4</a></span>
+<span class="normal"><a href="#L-1-5">5</a></span>
+<span class="normal"><a href="#L-1-6">6</a></span>
+<span class="normal"><a href="#L-1-7">7</a></span>
+<span class="normal"><a href="#L-1-8">8</a></span>
+<span class="normal"><a href="#L-1-9">9</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span id="L-1-1"><a id="L-1-1" name="L-1-1"></a><span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">Book</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+</span><span id="L-1-2"><a id="L-1-2" name="L-1-2"></a><span class="w">    </span><span class="n">bid</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">IDENTITY</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="n">KEY</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-1-3"><a id="L-1-3" name="L-1-3"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-1-4"><a id="L-1-4" name="L-1-4"></a><span class="w">    </span><span class="n">subject</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-1-5"><a id="L-1-5" name="L-1-5"></a><span class="w">    </span><span class="n">author</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-1-6"><a id="L-1-6" name="L-1-6"></a><span class="w">    </span><span class="n">publisher</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-1-7"><a id="L-1-7" name="L-1-7"></a><span class="w">    </span><span class="n">price</span><span class="w"> </span><span class="n">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-1-8"><a id="L-1-8" name="L-1-8"></a><span class="w">    </span><span class="n">no_of_copies</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">NULL</span><span class="w"></span>
+</span><span id="L-1-9"><a id="L-1-9" name="L-1-9"></a><span class="p">)</span><span class="w"></span>
+</span></pre></div>
+</td></tr></tbody></table>
+</div>
+<h1 id="form1">Form1<a class="headerlink" href="#form1" title="Permanent link" style="display: none;"> </a></h1>
+<div class="codeblock">
+<div class="clipboard" onclick="copyToClipboard()">
+<div class="clippy" tabindex="0" value="private void btnSave_Click(object sender, EventArgs e)
+        {
+            string title = txtTitle.Text;
+            string subject = cmbSubject.Text;
+            string author = txtAuthor.Text;
+            string publisher = txtPublisher.Text;
+            decimal price = Convert.ToDecimal(txtPrice.Text);
+            int noOfCopies = Convert.ToInt32(txtNoOfCopies.Text);
+
+
+             //Create a new book object
+            var newBook = new Book
+            {
+                title = title,
+                subject = subject,
+                author = author,
+                publisher = publisher,
+                price = price,
+                no_of_copies = noOfCopies
+            };
+
+            using (var context = new BookDataContext(Global.strconn))
+            {
+                context.Books.InsertOnSubmit(newBook);
+
+                context.SubmitChanges();
+                MessageBox.Show(&quot;Record Inserted Successfully&quot;);
+                filldata();
+            }
+
+        }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            filldata();
+        }
+
+        public void filldata() {
+            using (var context = new BookDataContext(Global.strconn))
+            {
+                var books = from book in context.Books
+                            orderby book.title
+                            select book;
+
+                gvBooks.DataSource = books.ToList();
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string subject = cmbSubjectSearch.Text;
+
+            using (var context = new BookDataContext(Global.strconn))
+            {
+                var books = from book in context.Books
+                            where book.subject == subject
+                            select book;
+
+                gvBooks.DataSource = books.ToList();
+            }
+        }">
+<div class="clippy-icon">⎗</div>
+<div class="check-icon d-none cb-tooltip">✓<span class="cb-tooltiptext"></span></div>
+</div>
+</div>
+<table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"><a href="#L-2-1"> 1</a></span>
+<span class="normal"><a href="#L-2-2"> 2</a></span>
+<span class="normal"><a href="#L-2-3"> 3</a></span>
+<span class="normal"><a href="#L-2-4"> 4</a></span>
+<span class="normal"><a href="#L-2-5"> 5</a></span>
+<span class="normal"><a href="#L-2-6"> 6</a></span>
+<span class="normal"><a href="#L-2-7"> 7</a></span>
+<span class="normal"><a href="#L-2-8"> 8</a></span>
+<span class="normal"><a href="#L-2-9"> 9</a></span>
+<span class="normal"><a href="#L-2-10">10</a></span>
+<span class="normal"><a href="#L-2-11">11</a></span>
+<span class="normal"><a href="#L-2-12">12</a></span>
+<span class="normal"><a href="#L-2-13">13</a></span>
+<span class="normal"><a href="#L-2-14">14</a></span>
+<span class="normal"><a href="#L-2-15">15</a></span>
+<span class="normal"><a href="#L-2-16">16</a></span>
+<span class="normal"><a href="#L-2-17">17</a></span>
+<span class="normal"><a href="#L-2-18">18</a></span>
+<span class="normal"><a href="#L-2-19">19</a></span>
+<span class="normal"><a href="#L-2-20">20</a></span>
+<span class="normal"><a href="#L-2-21">21</a></span>
+<span class="normal"><a href="#L-2-22">22</a></span>
+<span class="normal"><a href="#L-2-23">23</a></span>
+<span class="normal"><a href="#L-2-24">24</a></span>
+<span class="normal"><a href="#L-2-25">25</a></span>
+<span class="normal"><a href="#L-2-26">26</a></span>
+<span class="normal"><a href="#L-2-27">27</a></span>
+<span class="normal"><a href="#L-2-28">28</a></span>
+<span class="normal"><a href="#L-2-29">29</a></span>
+<span class="normal"><a href="#L-2-30">30</a></span>
+<span class="normal"><a href="#L-2-31">31</a></span>
+<span class="normal"><a href="#L-2-32">32</a></span>
+<span class="normal"><a href="#L-2-33">33</a></span>
+<span class="normal"><a href="#L-2-34">34</a></span>
+<span class="normal"><a href="#L-2-35">35</a></span>
+<span class="normal"><a href="#L-2-36">36</a></span>
+<span class="normal"><a href="#L-2-37">37</a></span>
+<span class="normal"><a href="#L-2-38">38</a></span>
+<span class="normal"><a href="#L-2-39">39</a></span>
+<span class="normal"><a href="#L-2-40">40</a></span>
+<span class="normal"><a href="#L-2-41">41</a></span>
+<span class="normal"><a href="#L-2-42">42</a></span>
+<span class="normal"><a href="#L-2-43">43</a></span>
+<span class="normal"><a href="#L-2-44">44</a></span>
+<span class="normal"><a href="#L-2-45">45</a></span>
+<span class="normal"><a href="#L-2-46">46</a></span>
+<span class="normal"><a href="#L-2-47">47</a></span>
+<span class="normal"><a href="#L-2-48">48</a></span>
+<span class="normal"><a href="#L-2-49">49</a></span>
+<span class="normal"><a href="#L-2-50">50</a></span>
+<span class="normal"><a href="#L-2-51">51</a></span>
+<span class="normal"><a href="#L-2-52">52</a></span>
+<span class="normal"><a href="#L-2-53">53</a></span>
+<span class="normal"><a href="#L-2-54">54</a></span>
+<span class="normal"><a href="#L-2-55">55</a></span>
+<span class="normal"><a href="#L-2-56">56</a></span>
+<span class="normal"><a href="#L-2-57">57</a></span>
+<span class="normal"><a href="#L-2-58">58</a></span>
+<span class="normal"><a href="#L-2-59">59</a></span>
+<span class="normal"><a href="#L-2-60">60</a></span>
+<span class="normal"><a href="#L-2-61">61</a></span>
+<span class="normal"><a href="#L-2-62">62</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span id="L-2-1"><a id="L-2-1" name="L-2-1"></a><span class="n">private</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="w"> </span><span class="n">btnSave_Click</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+</span><span id="L-2-2"><a id="L-2-2" name="L-2-2"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-2-3"><a id="L-2-3" name="L-2-3"></a><span class="w">            </span><span class="n">string</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">txtTitle</span><span class="o">.</span><span class="n">Text</span><span class="p">;</span><span class="w"></span>
+</span><span id="L-2-4"><a id="L-2-4" name="L-2-4"></a><span class="w">            </span><span class="n">string</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmbSubject</span><span class="o">.</span><span class="n">Text</span><span class="p">;</span><span class="w"></span>
+</span><span id="L-2-5"><a id="L-2-5" name="L-2-5"></a><span class="w">            </span><span class="n">string</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">txtAuthor</span><span class="o">.</span><span class="n">Text</span><span class="p">;</span><span class="w"></span>
+</span><span id="L-2-6"><a id="L-2-6" name="L-2-6"></a><span class="w">            </span><span class="n">string</span><span class="w"> </span><span class="n">publisher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">txtPublisher</span><span class="o">.</span><span class="n">Text</span><span class="p">;</span><span class="w"></span>
+</span><span id="L-2-7"><a id="L-2-7" name="L-2-7"></a><span class="w">            </span><span class="n">decimal</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="o">.</span><span class="n">ToDecimal</span><span class="p">(</span><span class="n">txtPrice</span><span class="o">.</span><span class="n">Text</span><span class="p">);</span><span class="w"></span>
+</span><span id="L-2-8"><a id="L-2-8" name="L-2-8"></a><span class="w">            </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">noOfCopies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="o">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">txtNoOfCopies</span><span class="o">.</span><span class="n">Text</span><span class="p">);</span><span class="w"></span>
+</span><span id="L-2-9"><a id="L-2-9" name="L-2-9"></a>
+</span><span id="L-2-10"><a id="L-2-10" name="L-2-10"></a>
+</span><span id="L-2-11"><a id="L-2-11" name="L-2-11"></a><span class="w">             </span><span class="o">//</span><span class="n">Create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">book</span><span class="w"> </span><span class="n">object</span><span class="w"></span>
+</span><span id="L-2-12"><a id="L-2-12" name="L-2-12"></a><span class="w">            </span><span class="k">var</span><span class="w"> </span><span class="n">newBook</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">Book</span><span class="w"></span>
+</span><span id="L-2-13"><a id="L-2-13" name="L-2-13"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-2-14"><a id="L-2-14" name="L-2-14"></a><span class="w">                </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-2-15"><a id="L-2-15" name="L-2-15"></a><span class="w">                </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subject</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-2-16"><a id="L-2-16" name="L-2-16"></a><span class="w">                </span><span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">author</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-2-17"><a id="L-2-17" name="L-2-17"></a><span class="w">                </span><span class="n">publisher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">publisher</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-2-18"><a id="L-2-18" name="L-2-18"></a><span class="w">                </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="p">,</span><span class="w"></span>
+</span><span id="L-2-19"><a id="L-2-19" name="L-2-19"></a><span class="w">                </span><span class="n">no_of_copies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">noOfCopies</span><span class="w"></span>
+</span><span id="L-2-20"><a id="L-2-20" name="L-2-20"></a><span class="w">            </span><span class="p">};</span><span class="w"></span>
+</span><span id="L-2-21"><a id="L-2-21" name="L-2-21"></a>
+</span><span id="L-2-22"><a id="L-2-22" name="L-2-22"></a><span class="w">            </span><span class="n">using</span><span class="w"> </span><span class="p">(</span><span class="k">var</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">BookDataContext</span><span class="p">(</span><span class="n">Global</span><span class="o">.</span><span class="n">strconn</span><span class="p">))</span><span class="w"></span>
+</span><span id="L-2-23"><a id="L-2-23" name="L-2-23"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-2-24"><a id="L-2-24" name="L-2-24"></a><span class="w">                </span><span class="n">context</span><span class="o">.</span><span class="n">Books</span><span class="o">.</span><span class="n">InsertOnSubmit</span><span class="p">(</span><span class="n">newBook</span><span class="p">);</span><span class="w"></span>
+</span><span id="L-2-25"><a id="L-2-25" name="L-2-25"></a>
+</span><span id="L-2-26"><a id="L-2-26" name="L-2-26"></a><span class="w">                </span><span class="n">context</span><span class="o">.</span><span class="n">SubmitChanges</span><span class="p">();</span><span class="w"></span>
+</span><span id="L-2-27"><a id="L-2-27" name="L-2-27"></a><span class="w">                </span><span class="n">MessageBox</span><span class="o">.</span><span class="n">Show</span><span class="p">(</span><span class="s2">"Record Inserted Successfully"</span><span class="p">);</span><span class="w"></span>
+</span><span id="L-2-28"><a id="L-2-28" name="L-2-28"></a><span class="w">                </span><span class="n">filldata</span><span class="p">();</span><span class="w"></span>
+</span><span id="L-2-29"><a id="L-2-29" name="L-2-29"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+</span><span id="L-2-30"><a id="L-2-30" name="L-2-30"></a>
+</span><span id="L-2-31"><a id="L-2-31" name="L-2-31"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+</span><span id="L-2-32"><a id="L-2-32" name="L-2-32"></a>
+</span><span id="L-2-33"><a id="L-2-33" name="L-2-33"></a>
+</span><span id="L-2-34"><a id="L-2-34" name="L-2-34"></a><span class="w">        </span><span class="n">private</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="w"> </span><span class="n">Form1_Load</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+</span><span id="L-2-35"><a id="L-2-35" name="L-2-35"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-2-36"><a id="L-2-36" name="L-2-36"></a><span class="w">            </span><span class="n">filldata</span><span class="p">();</span><span class="w"></span>
+</span><span id="L-2-37"><a id="L-2-37" name="L-2-37"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+</span><span id="L-2-38"><a id="L-2-38" name="L-2-38"></a>
+</span><span id="L-2-39"><a id="L-2-39" name="L-2-39"></a><span class="w">        </span><span class="n">public</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="w"> </span><span class="n">filldata</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-2-40"><a id="L-2-40" name="L-2-40"></a><span class="w">            </span><span class="n">using</span><span class="w"> </span><span class="p">(</span><span class="k">var</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">BookDataContext</span><span class="p">(</span><span class="n">Global</span><span class="o">.</span><span class="n">strconn</span><span class="p">))</span><span class="w"></span>
+</span><span id="L-2-41"><a id="L-2-41" name="L-2-41"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-2-42"><a id="L-2-42" name="L-2-42"></a><span class="w">                </span><span class="k">var</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">book</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">context</span><span class="o">.</span><span class="n">Books</span><span class="w"></span>
+</span><span id="L-2-43"><a id="L-2-43" name="L-2-43"></a><span class="w">                            </span><span class="n">orderby</span><span class="w"> </span><span class="n">book</span><span class="o">.</span><span class="n">title</span><span class="w"></span>
+</span><span id="L-2-44"><a id="L-2-44" name="L-2-44"></a><span class="w">                            </span><span class="n">select</span><span class="w"> </span><span class="n">book</span><span class="p">;</span><span class="w"></span>
+</span><span id="L-2-45"><a id="L-2-45" name="L-2-45"></a>
+</span><span id="L-2-46"><a id="L-2-46" name="L-2-46"></a><span class="w">                </span><span class="n">gvBooks</span><span class="o">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">books</span><span class="o">.</span><span class="n">ToList</span><span class="p">();</span><span class="w"></span>
+</span><span id="L-2-47"><a id="L-2-47" name="L-2-47"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+</span><span id="L-2-48"><a id="L-2-48" name="L-2-48"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+</span><span id="L-2-49"><a id="L-2-49" name="L-2-49"></a>
+</span><span id="L-2-50"><a id="L-2-50" name="L-2-50"></a><span class="w">        </span><span class="n">private</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="w"> </span><span class="n">btnSearch_Click</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+</span><span id="L-2-51"><a id="L-2-51" name="L-2-51"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-2-52"><a id="L-2-52" name="L-2-52"></a><span class="w">            </span><span class="n">string</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmbSubjectSearch</span><span class="o">.</span><span class="n">Text</span><span class="p">;</span><span class="w"></span>
+</span><span id="L-2-53"><a id="L-2-53" name="L-2-53"></a>
+</span><span id="L-2-54"><a id="L-2-54" name="L-2-54"></a><span class="w">            </span><span class="n">using</span><span class="w"> </span><span class="p">(</span><span class="k">var</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">BookDataContext</span><span class="p">(</span><span class="n">Global</span><span class="o">.</span><span class="n">strconn</span><span class="p">))</span><span class="w"></span>
+</span><span id="L-2-55"><a id="L-2-55" name="L-2-55"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-2-56"><a id="L-2-56" name="L-2-56"></a><span class="w">                </span><span class="k">var</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">book</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">context</span><span class="o">.</span><span class="n">Books</span><span class="w"></span>
+</span><span id="L-2-57"><a id="L-2-57" name="L-2-57"></a><span class="w">                            </span><span class="n">where</span><span class="w"> </span><span class="n">book</span><span class="o">.</span><span class="n">subject</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">subject</span><span class="w"></span>
+</span><span id="L-2-58"><a id="L-2-58" name="L-2-58"></a><span class="w">                            </span><span class="n">select</span><span class="w"> </span><span class="n">book</span><span class="p">;</span><span class="w"></span>
+</span><span id="L-2-59"><a id="L-2-59" name="L-2-59"></a>
+</span><span id="L-2-60"><a id="L-2-60" name="L-2-60"></a><span class="w">                </span><span class="n">gvBooks</span><span class="o">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">books</span><span class="o">.</span><span class="n">ToList</span><span class="p">();</span><span class="w"></span>
+</span><span id="L-2-61"><a id="L-2-61" name="L-2-61"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+</span><span id="L-2-62"><a id="L-2-62" name="L-2-62"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+</span></pre></div>
+</td></tr></tbody></table>
+</div>
+<h1 id="form2">Form2<a class="headerlink" href="#form2" title="Permanent link"> </a></h1>
+<div class="codeblock">
+<div class="clipboard">
+<div class="clippy" tabindex="0" value="public Form2()
+        {
+            InitializeComponent();
+            // Create a new DataContext with the connection string
+            using (var context = new BookDataContext(Global.strconn))
+            {
+                // Query the top five books with the lowest prices
+                var books = (from book in context.Books
+                             orderby book.price ascending
+                             select book).Take(5);
+
+                // Bind the results to a DataGridView
+                dataGridView1.DataSource = books.ToList();
+            }
+
+        }">
+<div class="clippy-icon">⎗</div>
+<div class="check-icon d-none cb-tooltip">✓<span class="cb-tooltiptext"></span></div>
+</div>
+</div>
+<table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"><a href="#L-3-1"> 1</a></span>
+<span class="normal"><a href="#L-3-2"> 2</a></span>
+<span class="normal"><a href="#L-3-3"> 3</a></span>
+<span class="normal"><a href="#L-3-4"> 4</a></span>
+<span class="normal"><a href="#L-3-5"> 5</a></span>
+<span class="normal"><a href="#L-3-6"> 6</a></span>
+<span class="normal"><a href="#L-3-7"> 7</a></span>
+<span class="normal"><a href="#L-3-8"> 8</a></span>
+<span class="normal"><a href="#L-3-9"> 9</a></span>
+<span class="normal"><a href="#L-3-10">10</a></span>
+<span class="normal"><a href="#L-3-11">11</a></span>
+<span class="normal"><a href="#L-3-12">12</a></span>
+<span class="normal"><a href="#L-3-13">13</a></span>
+<span class="normal"><a href="#L-3-14">14</a></span>
+<span class="normal"><a href="#L-3-15">15</a></span>
+<span class="normal"><a href="#L-3-16">16</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span id="L-3-1"><a id="L-3-1" name="L-3-1"></a><span class="n">public</span><span class="w"> </span><span class="n">Form2</span><span class="p">()</span><span class="w"></span>
+</span><span id="L-3-2"><a id="L-3-2" name="L-3-2"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-3-3"><a id="L-3-3" name="L-3-3"></a><span class="w">            </span><span class="n">InitializeComponent</span><span class="p">();</span><span class="w"></span>
+</span><span id="L-3-4"><a id="L-3-4" name="L-3-4"></a><span class="w">            </span><span class="o">//</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">DataContext</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="n">string</span><span class="w"></span>
+</span><span id="L-3-5"><a id="L-3-5" name="L-3-5"></a><span class="w">            </span><span class="n">using</span><span class="w"> </span><span class="p">(</span><span class="k">var</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">BookDataContext</span><span class="p">(</span><span class="n">Global</span><span class="o">.</span><span class="n">strconn</span><span class="p">))</span><span class="w"></span>
+</span><span id="L-3-6"><a id="L-3-6" name="L-3-6"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-3-7"><a id="L-3-7" name="L-3-7"></a><span class="w">                </span><span class="o">//</span><span class="w"> </span><span class="n">Query</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="n">five</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">lowest</span><span class="w"> </span><span class="n">prices</span><span class="w"></span>
+</span><span id="L-3-8"><a id="L-3-8" name="L-3-8"></a><span class="w">                </span><span class="k">var</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">book</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">context</span><span class="o">.</span><span class="n">Books</span><span class="w"></span>
+</span><span id="L-3-9"><a id="L-3-9" name="L-3-9"></a><span class="w">                             </span><span class="n">orderby</span><span class="w"> </span><span class="n">book</span><span class="o">.</span><span class="n">price</span><span class="w"> </span><span class="n">ascending</span><span class="w"></span>
+</span><span id="L-3-10"><a id="L-3-10" name="L-3-10"></a><span class="w">                             </span><span class="n">select</span><span class="w"> </span><span class="n">book</span><span class="p">)</span><span class="o">.</span><span class="n">Take</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+</span><span id="L-3-11"><a id="L-3-11" name="L-3-11"></a>
+</span><span id="L-3-12"><a id="L-3-12" name="L-3-12"></a><span class="w">                </span><span class="o">//</span><span class="w"> </span><span class="n">Bind</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">DataGridView</span><span class="w"></span>
+</span><span id="L-3-13"><a id="L-3-13" name="L-3-13"></a><span class="w">                </span><span class="n">dataGridView1</span><span class="o">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">books</span><span class="o">.</span><span class="n">ToList</span><span class="p">();</span><span class="w"></span>
+</span><span id="L-3-14"><a id="L-3-14" name="L-3-14"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+</span><span id="L-3-15"><a id="L-3-15" name="L-3-15"></a>
+</span><span id="L-3-16"><a id="L-3-16" name="L-3-16"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+</span></pre></div>
+</td></tr></tbody></table>
+</div>
+<h1 id="form3">Form3<a class="headerlink" href="#form3" title="Permanent link"> </a></h1>
+<div class="codeblock">
+<div class="clipboard">
+<div class="clippy" tabindex="0" value="public Form3()
+        {
+            InitializeComponent();
+            // Create a new DataContext with the connection string
+            using (var context = new BookDataContext(Global.strconn))
+            {
+                // Query the top five books with the highest number of copies
+                var books = (from book in context.Books
+                             orderby book.no_of_copies descending
+                             select book).Take(5);
+
+                // Bind the results to a DataGridView
+                dataGridView1.DataSource = books.ToList();
+            }
+
+        }">
+<div class="clippy-icon">⎗</div>
+<div class="check-icon d-none cb-tooltip">✓<span class="cb-tooltiptext"></span></div>
+</div>
+</div>
+<table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"><a href="#L-4-1"> 1</a></span>
+<span class="normal"><a href="#L-4-2"> 2</a></span>
+<span class="normal"><a href="#L-4-3"> 3</a></span>
+<span class="normal"><a href="#L-4-4"> 4</a></span>
+<span class="normal"><a href="#L-4-5"> 5</a></span>
+<span class="normal"><a href="#L-4-6"> 6</a></span>
+<span class="normal"><a href="#L-4-7"> 7</a></span>
+<span class="normal"><a href="#L-4-8"> 8</a></span>
+<span class="normal"><a href="#L-4-9"> 9</a></span>
+<span class="normal"><a href="#L-4-10">10</a></span>
+<span class="normal"><a href="#L-4-11">11</a></span>
+<span class="normal"><a href="#L-4-12">12</a></span>
+<span class="normal"><a href="#L-4-13">13</a></span>
+<span class="normal"><a href="#L-4-14">14</a></span>
+<span class="normal"><a href="#L-4-15">15</a></span>
+<span class="normal"><a href="#L-4-16">16</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span id="L-4-1"><a id="L-4-1" name="L-4-1"></a><span class="n">public</span><span class="w"> </span><span class="n">Form3</span><span class="p">()</span><span class="w"></span>
+</span><span id="L-4-2"><a id="L-4-2" name="L-4-2"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-4-3"><a id="L-4-3" name="L-4-3"></a><span class="w">            </span><span class="n">InitializeComponent</span><span class="p">();</span><span class="w"></span>
+</span><span id="L-4-4"><a id="L-4-4" name="L-4-4"></a><span class="w">            </span><span class="o">//</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">DataContext</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="n">string</span><span class="w"></span>
+</span><span id="L-4-5"><a id="L-4-5" name="L-4-5"></a><span class="w">            </span><span class="n">using</span><span class="w"> </span><span class="p">(</span><span class="k">var</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">BookDataContext</span><span class="p">(</span><span class="n">Global</span><span class="o">.</span><span class="n">strconn</span><span class="p">))</span><span class="w"></span>
+</span><span id="L-4-6"><a id="L-4-6" name="L-4-6"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
+</span><span id="L-4-7"><a id="L-4-7" name="L-4-7"></a><span class="w">                </span><span class="o">//</span><span class="w"> </span><span class="n">Query</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="n">five</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">highest</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">copies</span><span class="w"></span>
+</span><span id="L-4-8"><a id="L-4-8" name="L-4-8"></a><span class="w">                </span><span class="k">var</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">book</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">context</span><span class="o">.</span><span class="n">Books</span><span class="w"></span>
+</span><span id="L-4-9"><a id="L-4-9" name="L-4-9"></a><span class="w">                             </span><span class="n">orderby</span><span class="w"> </span><span class="n">book</span><span class="o">.</span><span class="n">no_of_copies</span><span class="w"> </span><span class="n">descending</span><span class="w"></span>
+</span><span id="L-4-10"><a id="L-4-10" name="L-4-10"></a><span class="w">                             </span><span class="n">select</span><span class="w"> </span><span class="n">book</span><span class="p">)</span><span class="o">.</span><span class="n">Take</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+</span><span id="L-4-11"><a id="L-4-11" name="L-4-11"></a>
+</span><span id="L-4-12"><a id="L-4-12" name="L-4-12"></a><span class="w">                </span><span class="o">//</span><span class="w"> </span><span class="n">Bind</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">DataGridView</span><span class="w"></span>
+</span><span id="L-4-13"><a id="L-4-13" name="L-4-13"></a><span class="w">                </span><span class="n">dataGridView1</span><span class="o">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">books</span><span class="o">.</span><span class="n">ToList</span><span class="p">();</span><span class="w"></span>
+</span><span id="L-4-14"><a id="L-4-14" name="L-4-14"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+</span><span id="L-4-15"><a id="L-4-15" name="L-4-15"></a>
+</span><span id="L-4-16"><a id="L-4-16" name="L-4-16"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+</span></pre></div>
+</td></tr></tbody></table>
+</div>
+</div>
+                </article>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+<script src="../../js/jquery-3.5.1.min.dc5e7f18c8.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script>
+        function copyToClipboard() {
+            const snippet = document.querySelector('.clippy');
+            const code = snippet.getAttribute('value');
+            navigator.clipboard.writeText(code).then(() => {
+                const checkIcon = snippet.querySelector('.check-icon');
+                checkIcon.classList.remove('d-none');
+                setTimeout(() => {
+                    checkIcon.classList.add('d-none');
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+</html>
